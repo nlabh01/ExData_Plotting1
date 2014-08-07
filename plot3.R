@@ -1,8 +1,12 @@
 
-script_path <- dirname(sys.frame(1)$ofile)
+# below two lines makes the script independent of the path 
+# where it is downlaoded and executed from
 setwd(script_path)
 
 
+# read the data into "filtered_data" variable to be
+# used later for plotting
+script_path <- dirname(sys.frame(1)$ofile)
 source("data-in.R")
 
 

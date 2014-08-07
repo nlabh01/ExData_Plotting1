@@ -1,9 +1,9 @@
 
-
 fileURL="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
 downloadFile="data_for_project.zip"
 dataFile="household_power_consumption.txt"
 
+# download the file only if not already found
 if ( .Platform$OS.type  %in% "windows" ) {
    # Using default download method for Win OS
    if(!file.exists(downloadFile)){
@@ -23,13 +23,16 @@ if(!file.exists(dataFile)){
    unzip(downloadFile)
 }
 
+# read the complete data file
 raw_data <- read.csv(dataFile,header=TRUE,sep=';',na = "?")
+
+# now filter the rows by date
 filtered_data <- raw_data[(raw_data$Date == "1/2/2007" | raw_data$Date == "2/2/2007"),]
 
 # get rid of raw data to release memory 
 rm(raw_data)
 
-
+# fixi/convert the date and time columns
 filtered_data$DateTime <-  strptime(paste(filtered_data$Date, filtered_data$Time), "%d/%m/%Y%H:%M:%S")
 
 
