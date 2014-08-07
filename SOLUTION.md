@@ -38,7 +38,7 @@ Here is the R command to check for the OS type:
   * <b>source("plot1.R")</b>
   * <b>source("plot2.R")</b>
   * <b>source("plot3.R")</b>
-  * <b>source("plot1s4.R")</b>
+  * <b>source("plot4.R")</b>
 
 <b>NOTE:</b> Each of the 4 plot scripts above rexecutes the <b>data-in.R</b> script. To avoid re-downloading and re-extracting the data for every plot script executed, the <b>data-in.R</b> script for presence of the download file or unzipped data file.
 
@@ -79,7 +79,9 @@ the dataset will occupy:
 
 ```
 
-## The four plots that were created as part of the project:
+## The Four Plots
+
+Below are the four plots that created as part of the project:
 
 
 ### Plot 1
