@@ -1,31 +1,46 @@
-## Introduction
+## Exploratory Data Analysis: Course Project
 
 
-The code in this assignment was developed and tested on Windows,
-but there is code to check OS type and do the necessary modification
-to the file download icommand from http source. In particular,
+The code for this project was developed and tested on Windows.
+However there is code to check OS type and do the necessary modification
+to the file download command from http source. In particular,
 assumption was made that "curl" would be available and used on Mac/Unix.
+
+Here is the R command to check for the OS type:
+```{r}
+   if ( .Platform$OS.type  %in% "windows" ) {
+      # Using default download method for Win OS
+      if(!file.exists(downloadFile)){
+              download.file(fileURL,downloadFile)
+      }
+    } else { 
+      # Using curl for download for Mac/Unix OS
+      if(!file.exists(downloadFile)){
+              download.file(fileURL,downloadFile,"curl")
+      }
+  }
+```
 
 ###Files included:
 * R code to download and pre-process the data file: <b>data-in.R<b>
 * R code to do the plots: 
-<ol>
-<li><b>plot1.R<b></li>
-<li><b>plot2.R<b></li>
-<li><b>plot3.R<b></li>
-<li><b>plot4.R<b></li>
-</ol>
 
-###Steps too run the script:
+  * <b>plot1.R</b>
+  * <b>plot2.R</b>
+  * <b>plot3.R</b>
+  * <b>plot4.R</b>
+
+
+###Steps to run the script:
 
 * Download the script(s) from GITHUB
+
 * Run the scripts:
-<ol>
-<li>source("plot1.R")</li>
-<li>source("plot2.R")</li>
-<li>source("plot3.R")</li>
-<li>source("plot1s4.R")</li>
-</ol>
+
+  * source("plot1.R")
+  * source("plot2.R")
+  * source("plot3.R")
+  * source("plot1s4.R")
 
 <b>NOTE:</b> Each of the plot scripts sources/runs the data-in.R, which checks to avoid download or unzip of the file if the data files are already present. This way, we avoid re-downloading and re-extracting the data for every plot.
 
@@ -57,7 +72,6 @@ the dataset will require in memory before reading into R.
 	no_of_lines
 
 
-	
         # read a fixed number of lines and use object_size() function
 	# to determine the amount of memory used. This size obtained
 	# along with previously obtained total number of lines in the file
