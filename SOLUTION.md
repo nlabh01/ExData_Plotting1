@@ -40,15 +40,14 @@ Here is the R command to check for the OS type:
   * <b>source("plot3.R")</b>
   * <b>source("plot1s4.R")</b>
 
-<b>NOTE:</b> Each of the 4 plot scripts above rexecutes the <b>data-in.R</b>. 
-The <b<data-in.R</b> script checks for presence of the download file or unzipped data file. That helps avoid re-downloading and re-extracting the data for every plot script executed.
+<b>NOTE:</b> Each of the 4 plot scripts above rexecutes the <b>data-in.R</b> script. To avoid re-downloading and re-extracting the data for every plot script executed, the <b>data-in.R</b> script for presence of the download file or unzipped data file.
 
 
 
-### Considerations while loading the data:
+### Considerations while loading the data
 
 
-* R code snippet to calculate rough estimate of amount of memory 
+R code snippet to calculate rough estimate of amount of memory 
 the dataset will occupy: 
 
 
