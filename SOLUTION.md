@@ -21,7 +21,7 @@ Here is the R command to check for the OS type:
   }
 ```
 
-###Files included:
+###R source files included:
 * R code to download and pre-process the data file: <b>data-in.R<b>
 * R code to do the plots: 
   * <b>plot1.R</b>
