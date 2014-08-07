@@ -1,6 +1,6 @@
 ## Introduction
 
-<b>NOTE: Solution and other details posted in <a href="https://github.com/nlabh01/ExData_Plotting1/blob/master/SOLUTION.md">SOLUTION.md</a>
+<b>NOTE: Details of the solution to this assignment posted <a href="https://github.com/nlabh01/ExData_Plotting1/blob/master/SOLUTION.md">here</a>.
 
 This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
