@@ -52,30 +52,30 @@ the dataset will occupy:
 
 
 ```{r}
-        # reading data in small chunks and counting the 
-        # number of lines in the file without having to
-        # read the entire data in memory
-        con <- file("exdata_data_household_power_consumption/household_power_consumption.txt",open="r")
-        readsizeof <- 2000
-        no_of_lines  <- 0
+ # reading data in small chunks and counting the 
+ # number of lines in the file without having to
+ # read the entire data in memory
+ con <- file("exdata_data_household_power_consumption/household_power_consumption.txt",open="r")
+ readsizeof <- 2000
+ no_of_lines  <- 0
 
-        while((lines_read <- length(readLines(con,readsizeof))) > 0 ) 
-                no_of_lines  <- no_of_lines + lines_read
+ while((lines_read <- length(readLines(con,readsizeof))) > 0 ) 
+         no_of_lines  <- no_of_lines + lines_read
 
-        close(con)
-        no_of_lines
+ close(con)
+ no_of_lines
 
 
-        # read a fixed number of lines and use object_size() function
-        # to determine the amount of memory used. This size obtained
-        # along with previously obtained total number of lines in the file
-        # we can easily determine the total memory requirements
-        # NOTE: In my execution, reading in 100 lines used up 15.1 kB
-        few_lines <- read.csv("exdata_data_household_power_consumption/household_power_consumption.txt", nrows=10, sep=';')
-        few_lines
+ # read a fixed number of lines and use object_size() function
+ # to determine the amount of memory used. This size obtained
+ # along with previously obtained total number of lines in the file
+ # we can easily determine the total memory requirements
+ # NOTE: In my execution, reading in 100 lines used up 15.1 kB
+ few_lines <- read.csv("exdata_data_household_power_consumption/household_power_consumption.txt", nrows=10, sep=';')
+ few_lines
 
-        size_of_few_lines <- object_size(few_lines)
-        size_of_few_lines
+ size_of_few_lines <- object_size(few_lines)
+ size_of_few_lines
 
 ```
 
