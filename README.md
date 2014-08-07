@@ -1,5 +1,7 @@
 ## Introduction
 
+<b>NOTE: Solution and other details posted in <a href="https://github.com/nlabh01/ExData_Plotting1/blob/master/README.md">SOLUTION.md</a>
+
 This assignment uses data from
 the <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
 Learning Repository</a>, a popular repository for machine learning
