@@ -24,7 +24,6 @@ Here is the R command to check for the OS type:
 ###Files included:
 * R code to download and pre-process the data file: <b>data-in.R<b>
 * R code to do the plots: 
-
   * <b>plot1.R</b>
   * <b>plot2.R</b>
   * <b>plot3.R</b>
@@ -36,25 +35,21 @@ Here is the R command to check for the OS type:
 * Download the script(s) from GITHUB
 
 * Run the scripts:
+  * <b>source("plot1.R")</b>
+  * <b>source("plot2.R")</b>
+  * <b>source("plot3.R")</b>
+  * <b>source("plot1s4.R")</b>
 
-  * source("plot1.R")
-  * source("plot2.R")
-  * source("plot3.R")
-  * source("plot1s4.R")
+<b>NOTE:</b> Each of the 4 plot scripts above rexecutes the <b>data-in.R</b>. 
+The <b<data-in.R</b> script checks for presence of the download file or unzipped data file. That helps avoid re-downloading and re-extracting the data for every plot script executed.
 
-<b>NOTE:</b> Each of the plot scripts sources/runs the data-in.R, which checks to avoid download or unzip of the file if the data files are already present. This way, we avoid re-downloading and re-extracting the data for every plot.
-
-* <b>Description</b>: Measurements of electric power consumption in
-one household with a one-minute sampling rate over a period of almost
-4 years. Different electrical quantities and some sub-metering values
-are available.
 
 
 ### Considerations while loading the data:
 
 
-* R code snippet to calculate a rough estimate of how much memory 
-the dataset will require in memory before reading into R. 
+* R code snippet to calculate rough estimate of amount of memory 
+the dataset will occupy: 
 
 
 ```{r}
